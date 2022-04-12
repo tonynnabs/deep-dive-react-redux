@@ -8,6 +8,9 @@ const Counter = () => {
   const increment = () => {
     dispatch({type: 'increment'});
   }
+  const increase = () => {
+    dispatch({type: 'increase', amount: 5});
+  }
   const decrement = () => {
     dispatch({type: 'decrement'});
   }
@@ -17,6 +20,7 @@ const Counter = () => {
       <div className={classes.value}>{counter}</div>
       <div>
         <button onClick={increment}>Increment</button>
+        <button onClick={increase}>Increment by 5</button>
         <button onClick={decrement}>Decrement</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
