@@ -4,8 +4,8 @@ import { counterActions } from '../store';
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter  = useSelector(state => state.counter);
-  const isVisible  = useSelector(state => state.isVisible);
+  const counter  = useSelector(state => state.counter.counter);
+  const isVisible  = useSelector(state => state.counter.isVisible);
   const increment = () => {
     dispatch(counterActions.increment());
   }
